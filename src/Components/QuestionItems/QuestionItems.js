@@ -17,8 +17,8 @@ const QuestionItems = ({ questionItem }) => {
     const handleOptionClick = (e) => {
         setSelectedOption(e.target.value);
         if (e.target.value === correctAnswer) {
-            toast.success("Yepp, that's is correct", {
-                position: "bottom-right",
+            toast.success("This is correct", {
+                position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -28,8 +28,8 @@ const QuestionItems = ({ questionItem }) => {
                 theme: "dark",
             });
         } else {
-            toast.error("Oops, that's incorrect. Please try again!", {
-                position: "bottom-right",
+            toast.error("Your Ans is incorrect. Please try again!", {
+                position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -41,22 +41,22 @@ const QuestionItems = ({ questionItem }) => {
         }
     };
     return (
-        <div>
-            <div>
-                <h1>{question}</h1>
+        <div className="mt-10 bg-orange-300 p-10 rounded-3xl">
+            <div className="flex justify-between items-center mb-5">
+                <h1 className="text-lg font-bold text-orange-800">{question}</h1>
                 <button onClick={showCorrectAnswer}>
                     <label htmlFor="my-modal" className="modal-button">
-                        <EyeIcon className="h-6 w-6 text-slate-400 pl-1" />
+                        <EyeIcon className="h-6 w-6 text-white pl-1" />
                     </label>
                 </button>
 
                 <input type="checkbox" id="my-modal" className="modal-toggle" />
-                <div>
-                    <div>
-                        <h3>
+                <div className="modal">
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg">
                             The correct answer is: {correctAnswer}
                         </h3>
-                        <div>
+                        <div className="modal-action">
                             <button>
                                 <label htmlFor=""> Close</label>
                             </button>
@@ -65,7 +65,8 @@ const QuestionItems = ({ questionItem }) => {
                 </div>
 
             </div>
-            <div>
+            <div className="bg-slate-700 my-4 p-4 rounded-lg flex items-center"
+                id="option-item-1">
                 <input
                     type="radio"
                     name={options[0]}
