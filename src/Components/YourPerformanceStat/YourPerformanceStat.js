@@ -8,13 +8,9 @@ const YourPerformanceStat = () => {
 
     return (
         <div>
-            {
-                topic.map(topic => <Chart
-                    key={topic.id}
-                    topic={topic}
-                >
-                </Chart>)
-            }
+
+            <Chart></Chart>
+
 
 
         </div>
