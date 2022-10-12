@@ -12,10 +12,10 @@ const Topic = ({ topic }) => {
     };
     return (
 
-        <div className='topic-container'>
+        <div className='topic-container font-bold'>
             <img src={logo} alt="" />
             <h1>{name}</h1>
-            <h2>Total Question: {total}</h2>
+            <h2>Total Questions: {total}</h2>
             <button className='btn font-bold text-white rounded-5' onClick={goToQuestions}>Start Quiz</button>
         </div>
 

@@ -41,17 +41,17 @@ const QuestionItems = ({ questionItem, setCorrectAnswer }) => {
         }
     };
     return (
-        <div className="mt-10 bg-orange-300 p-10 rounded-3xl">
+        <div className="mt-10 bg-orange-300 p-10 rounded-md m-10">
             <div className="flex justify-between items-center mb-5">
                 <h1 className="text-lg font-bold text-orange-800">{question}</h1>
                 <button onClick={showCorrectAnswer} className="hover:cursor-pointer focus:cursor-pointer cursor-pointer btn" >
                     <label htmlFor="my-modal-3" >
-                        <EyeIcon className="h-6 w-6 text-slate-400 text-center" />
+                        <EyeIcon className="h-6 w-6 text-slate-900 text-center" />
                     </label>
                 </button>
             </div>
 
-            <div className="bg-slate-700 my-4 p-4 rounded-lg flex items-center"
+            <div className="bg-orange-800 my-4 p-4 rounded-lg flex items-center"
                 id="option-item-1">
                 <input
                     type="radio"
@@ -66,7 +66,7 @@ const QuestionItems = ({ questionItem, setCorrectAnswer }) => {
                 </label>
             </div>
             <div
-                className="bg-slate-700 my-4 p-4 rounded-lg flex items-center"
+                className="bg-orange-800 my-4 p-4 rounded-lg flex items-center"
                 id="option-item"
             >
                 <input
@@ -82,7 +82,7 @@ const QuestionItems = ({ questionItem, setCorrectAnswer }) => {
                 </label>
             </div>
             <div
-                className="bg-slate-700 my-4 p-4 rounded-lg flex items-center"
+                className="bg-orange-800 my-4 p-4 rounded-lg flex items-center"
                 id="option-item"
             >
                 <input
@@ -98,7 +98,7 @@ const QuestionItems = ({ questionItem, setCorrectAnswer }) => {
                 </label>
             </div>
             <div
-                className="bg-slate-700 my-4 p-4 rounded-lg flex items-center"
+                className="bg-orange-800 my-4 p-4 rounded-lg flex items-center"
                 id="option-item"
             >
                 <input
