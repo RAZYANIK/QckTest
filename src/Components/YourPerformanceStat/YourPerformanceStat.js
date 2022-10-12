@@ -1,9 +1,22 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Chart from '../Chart/Chart';
 
 const YourPerformanceStat = () => {
+    const topic = useLoaderData().data;
+
+
     return (
         <div>
-            <h1>your are doing well</h1>
+            {
+                topic.map(topic => <Chart
+                    key={topic.id}
+                    topic={topic}
+                >
+                </Chart>)
+            }
+
+
         </div>
     );
 };
