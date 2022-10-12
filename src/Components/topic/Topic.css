@@ -1,0 +1,18 @@
+.topic-container {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.topic-container img {
+    height: auto;
+    width: 400px;
+}
+
+.topic-container button {
+
+    background-color: rgb(8, 8, 8);
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

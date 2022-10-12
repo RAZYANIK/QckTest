@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    background-color: rgb(207, 162, 162);
+    margin-left: 200px;
+    padding: 20px;
+    margin-top: 10px;
+
+}
+
+.default-container {
+    background-image: url('https://klaxos.com/wp-content/uploads/2017/12/strategy-brain-think-Mastermind.jpg');
+    height: 250px;
+    background-color: rgb(12, 18, 16);
+
+    padding: 20px;
+}
+
+/* .title {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+} */

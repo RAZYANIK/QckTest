@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.link link {
+    margin-left: 5px;
+    ;
+}

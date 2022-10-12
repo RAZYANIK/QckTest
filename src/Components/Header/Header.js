@@ -1,16 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import './Header.css'
 const Header = () => {
     return (
         <div>
-            <h1>quickTest</h1>
-            <Link to='/'>Home</Link>
-            <Link to='/quizTopics'>QuizTopics</Link>
-            <Link to='/yourPerformance'>YourPerformance</Link>
-            <Link to='/blog'>Blog</Link>
+            <div className='md:flex m-5 pl-5 header font-semibold bg-slate-600 h-10 text-white'>
+                <div className='font-bold'>
+                    <h1>QckTest</h1>
+                </div>
+                <div className='Link'>
+                    <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
+                    <NavLink className='pl-5' to='/quizTopics'>QuizTopics</NavLink>
+                    <NavLink className='pl-5' to='/yourPerformance'>YourPerformance</NavLink>
+                    <NavLink className='pl-5 mr-5' to='/blog'>Blog</NavLink>
+                </div>
 
-        </div>
+
+            </div>
+
+        </div >
     );
 };
 

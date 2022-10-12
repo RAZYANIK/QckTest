@@ -4,11 +4,11 @@ import Header from '../Components/Header/Header';
 
 const Main = () => {
     return (
-        <div>
-            <Header></Header>
+        <div >
+            < Header ></Header >
             <Outlet></Outlet>
 
-        </div>
+        </div >
     );
 };
 
