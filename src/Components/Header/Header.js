@@ -9,7 +9,7 @@ const Header = () => {
                     <h1>QckTest</h1>
                 </div>
                 <div className='Link'>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='/'>Home</NavLink>
 
                     <NavLink className='pl-5' to='/yourPerformance'>YourPerformance</NavLink>
                     <NavLink className='pl-5 mr-5' to='/blog'>Blog</NavLink>

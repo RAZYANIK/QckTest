@@ -4,7 +4,7 @@ import './App.css';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
 import Question from './Components/Question/Question';
-import QuizTopics from './Components/QuizTopics/QuizTopics';
+
 import YourPerformanceStat from './Components/YourPerformanceStat/YourPerformanceStat';
 import Main from './Layout/Main';
 
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <Main></Main>, children: [
       {
-        path: '/home',
+        path: '/',
         loader: async () => {
           return fetch('https://openapi.programming-hero.com/api/quiz')
         },

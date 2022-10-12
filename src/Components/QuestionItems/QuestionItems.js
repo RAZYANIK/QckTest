@@ -3,23 +3,23 @@ import { EyeIcon } from "@heroicons/react/24/solid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const QuestionItems = ({ questionItem }) => {
-    const { id, question, correctAnswer, options } = questionItem;
+const QuestionItems = ({ questionItem, setCorrectAnswer }) => {
+    const { question, correctAnswer, options } = questionItem;
 
     const [selectedOption, setSelectedOption] = useState('');
 
-    const showCorrectAnswer = (e) => {
-        if (question === e.target.value) {
-            console.log(correctAnswer);
-        }
+    const showCorrectAnswer = () => {
+        setCorrectAnswer(correctAnswer);
     };
+
     const isSelected = (value) => selectedOption === value;
+
     const handleOptionClick = (e) => {
         setSelectedOption(e.target.value);
         if (e.target.value === correctAnswer) {
             toast.success("This is correct", {
                 position: "top-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -30,7 +30,7 @@ const QuestionItems = ({ questionItem }) => {
         } else {
             toast.error("Your Ans is incorrect. Please try again!", {
                 position: "top-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -44,27 +44,13 @@ const QuestionItems = ({ questionItem }) => {
         <div className="mt-10 bg-orange-300 p-10 rounded-3xl">
             <div className="flex justify-between items-center mb-5">
                 <h1 className="text-lg font-bold text-orange-800">{question}</h1>
-                <button onClick={showCorrectAnswer}>
-                    <label htmlFor="my-modal" className="modal-button">
-                        <EyeIcon className="h-6 w-6 text-white pl-1" />
+                <button onClick={showCorrectAnswer} className="hover:cursor-pointer focus:cursor-pointer cursor-pointer btn" >
+                    <label htmlFor="my-modal-3" >
+                        <EyeIcon className="h-6 w-6 text-slate-400 text-center" />
                     </label>
                 </button>
-
-                <input type="checkbox" id="my-modal" className="modal-toggle" />
-                <div className="modal">
-                    <div className="modal-box">
-                        <h3 className="font-bold text-lg">
-                            The correct answer is: {correctAnswer}
-                        </h3>
-                        <div className="modal-action">
-                            <button>
-                                <label htmlFor=""> Close</label>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
             <div className="bg-slate-700 my-4 p-4 rounded-lg flex items-center"
                 id="option-item-1">
                 <input
