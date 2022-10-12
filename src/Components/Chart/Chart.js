@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, } from 'recharts';
 
 
 const Chart = () => {
@@ -28,22 +28,23 @@ const Chart = () => {
 
     return (
         <div>
+            <ResponsiveContainer width={500}
+                height={300}>
+                <LineChart
+                    width={500}
+                    height={300}
+                    data={data}
 
-            <LineChart
-                width={500}
-                height={300}
-                data={data}
-
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
 
 
-                <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-            </LineChart>
-
+                    <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+                </LineChart>
+            </ResponsiveContainer>
 
         </div>
     );
